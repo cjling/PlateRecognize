@@ -8,7 +8,16 @@
 
 JNIEXPORT jstring JNICALL Java_com_link_1trust_platerecognize_MainActivity_recognize
         (JNIEnv * env, jobject obj) {
-    auto results = easypr::api::plate_recognize(NULL, NULL, NULL);
-    return env->NewStringUTF("successfully!");
+
+        std::vector<std::string> results;
+        results = easypr::api::plate_recognize("/sdcard/tst.jpg", NULL, NULL);
+
+        std::string all;
+        for(int i = 0; i != results.size(); i++)
+        {
+            all = all + results[i] + "  ";
+        }
+
+        return env->NewStringUTF(all.c_str());
 }
 

@@ -6,8 +6,8 @@ namespace easypr {
 // static const char* kDefaultSvmPath = "resources/model/svm.xml";
 // static const char* kDefaultAnnPath = "resources/model/ann.xml";
 
-static const char* kDefaultSvmPath = "/sdcard/svm.xml";
-static const char* kDefaultAnnPath = "/sdcard/ann.xml";
+static char* kDefaultSvmPath = "/sdcard/svm.xml";
+static char* kDefaultAnnPath = "/sdcard/ann.xml";
 
 
 

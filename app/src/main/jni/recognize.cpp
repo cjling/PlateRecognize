@@ -11,6 +11,7 @@ JNIEXPORT jlong JNICALL Java_com_link_1trust_platerecognize_PlateRecognizeLib_In
   (JNIEnv * env, jobject obj, jstring svm_path)
   {
         jlong rel = 0;
+        cv::Ptr<ml::SVM> svm_model = ml::SVM::load<ml::SVM>(env->GetStringUTFChars(svm_path, NULL));
         return rel;
   }
 
@@ -18,6 +19,8 @@ JNIEXPORT jlong JNICALL Java_com_link_1trust_platerecognize_PlateRecognizeLib_In
   (JNIEnv * env, jobject obj, jstring ann_path)
   {
         jlong rel = 0;
+        cv::Ptr<cv::ml::ANN_MLP> ann_model = ml::ANN_MLP::load<ml::ANN_MLP>(env->GetStringUTFChars(ann_path, NULL));
+        // rel = (jlong) (ann);
         return rel;
   }
 
@@ -50,6 +53,15 @@ JNIEXPORT jstring JNICALL Java_com_link_1trust_platerecognize_PlateRecognizeLib_
 JNIEXPORT jstring JNICALL Java_com_link_1trust_platerecognize_PlateRecognizeLib_Recongize2
   (JNIEnv * env, jobject obj, jstring ann_path, jstring svm_path, jlong img_data)
   {
+        char ann_path_str[1024] = {0};
+        char svm_path_str[1024] = {0};
+
+        strcpy(ann_path_str, env->GetStringUTFChars(ann_path, NULL));
+        strcpy(svm_path_str, env->GetStringUTFChars(svm_path, NULL));
+
+        easypr::kDefaultAnnPath = ann_path_str;
+        easypr::kDefaultSvmPath = svm_path_str;
+
         return env->NewStringUTF("ok");
   }
 

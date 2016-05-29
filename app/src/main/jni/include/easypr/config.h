@@ -36,17 +36,17 @@ static const char *kChars[] = {
   "V", "W", "X",
   "Y", "Z",
   /*  24  */
-  "zh_cuan" , "zh_e"    , "zh_gan"  ,
-  "zh_gan1" , "zh_gui"  , "zh_gui1" ,
-  "zh_hei"  , "zh_hu"   , "zh_ji"   ,
-  "zh_jin"  , "zh_jing" , "zh_jl"   ,
-  "zh_liao" , "zh_lu"   , "zh_meng" ,
-  "zh_min"  , "zh_ning" , "zh_qing" ,
-  "zh_qiong", "zh_shan" , "zh_su"   ,
-  "zh_sx"   , "zh_wan"  , "zh_xiang",
-  "zh_xin"  , "zh_yu"   , "zh_yu1"  ,
-  "zh_yue"  , "zh_yun"  , "zh_zang" ,
-  "zh_zhe"
+  "川" , "鄂"    , "赣"  ,
+  "甘" , "贵"  , "桂" ,
+  "黑"  , "沪"   , "冀"   ,
+  "津"  , "京" , "吉"   ,
+  "辽" , "鲁"   , "蒙" ,
+  "闽"  , "宁" , "青" ,
+  "琼", "陕" , "苏"   ,
+  "晋"   , "皖"  , "湘",
+  "新"  , "豫"   , "渝"  ,
+  "粤"  , "云"  , "藏" ,
+  "浙"
   /*  31  */
 };
 

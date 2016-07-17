@@ -55,6 +55,23 @@ static std::vector<std::string> plate_recognize(const char* image,
   return std::move(results);
 }
 
+static std::vector<std::string> plate_recognize2(cv::Mat* img,
+                                                const char* model_svm,
+                                                const char* model_ann,
+                                                const bool life_mode = true) {
+
+  assert(!img->empty());
+
+  CPlateRecognize pr;
+  pr.setLifemode(life_mode);
+  pr.setDebug(false);
+
+  std::vector<std::string> results;
+  pr.plateRecognize(*img, results);
+
+  return std::move(results);
+}
+
 static Color get_plate_color(const char* image) {
   cv::Mat img = cv::imread(image);
 

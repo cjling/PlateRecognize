@@ -47,6 +47,14 @@ JNIEXPORT jstring JNICALL Java_com_link_1trust_platerecognize_PlateRecognizeLib_
 JNIEXPORT jstring JNICALL Java_com_link_1trust_platerecognize_PlateRecognizeLib_Recognize3
   (JNIEnv *, jobject, jlong, jlong, jlong);
 
+/*
+ * Class:     com_link_trust_platerecognize_PlateRecognizeLib
+ * Method:    Recongize4
+ * Signature: (II[BLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+ */
+JNIEXPORT jstring JNICALL Java_com_link_1trust_platerecognize_PlateRecognizeLib_Recongize4
+  (JNIEnv *, jobject, jint, jint, jbyteArray, jstring, jstring);
+
 #ifdef __cplusplus
 }
 #endif

@@ -14,5 +14,6 @@ public class PlateRecognizeLib {
     public native String Recongize1(String ann_path, String svm_path, String img_path);
     public native String Recongize2(String ann_path, String svm_path, long img_data);
     public native String Recognize3(long ann_model, long svm_model, long img_data);
+    public native String Recongize4(int width, int height, byte[] yuv, String ann_path, String svm_path);
 
 }
